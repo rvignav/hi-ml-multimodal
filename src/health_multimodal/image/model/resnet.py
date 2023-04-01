@@ -60,7 +60,7 @@ def _resnet(
 
     Adapted from :mod:`torchvision.models.resnet`.
     """
-    model = ResNetHIML(block=block, layers=layers, **kwargs)
+    model = ResNet(block=block, layers=layers, **kwargs)
     if pretrained:
         state_dict = load_state_dict_from_url(model_urls[arch], progress=progress)
         model.load_state_dict(state_dict)
